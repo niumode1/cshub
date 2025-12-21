@@ -105,8 +105,7 @@ CodeStart_hub/
 
 ### 克隆项目
 ```
-git clone [项目仓库地址]
-cd CodeStart_hub
+git clone https://niumode1.github.io/programming-tool-hub/
 ```
 
 ### 后端部署
