@@ -96,37 +96,43 @@ CodeStart_hub/
 - **资源数据**（resources.json）：学习资源的名称、描述、链接和分类
 
 ## 使用说明
-## 
-###环境要求
+
+### 环境要求
  - 前端：现代浏览器（Chrome/Firefox/Edge 等）
  - 后端：Node.js 14+、MySQL 8.0+
  - 端口：前端静态访问（任意），后端服务默认 3001 端口
  - 部署步骤
 
-###克隆项目
+### 克隆项目
 ```
 git clone [项目仓库地址]
 cd CodeStart_hub
 ```
 
-###后端部署
+### 后端部署
+
+进入后端目录
 ```
-# 进入后端目录
-cd backend
-# 安装依赖
+cd backend   
+```
+安装依赖
+```
 npm install
-# 配置.env文件（数据库连接/密钥等）
-# 示例.env内容：
-# DB_HOST=localhost
-# DB_USER=root
-# DB_PASS=你的数据库密码
-# DB_NAME=codestart_hub
-# JWT_SECRET=你的密钥
-# PORT=3001
+```
+配置.env文件（数据库连接/密钥等）
+示例.env内容：
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=你的数据库密码
+DB_NAME=codestart_hub
+JWT_SECRET=你的密钥
+PORT=3001
 # 启动后端服务
+```
 node server.js
 ```
-###数据库初始化
+
+### 数据库初始化
  - 创建数据库 codestart_hub
  - 执行以下 SQL 创建核心表：
 ```
@@ -164,6 +170,7 @@ CREATE TABLE `tools` (
 ```
 
 ### 进入1.31版本后端目录
+```
 cd /var/www/CodeStart_hub_1.31/backend  # 进入1.31版本后端目录
 
 pm2 start server.js --name codestart_hub_1.31  # 用pm2启动（命名为codestart_hub_1.31，区分旧版本）
@@ -173,8 +180,10 @@ pm2 status codestart_hub_1.31  # 查看状态
 pm2 startup  #生成 pm2 自启服务
 
 pm2 save  #保存为启动项
+```
 
 ### 前端访问
+
 直接用浏览器打开项目根目录的 index.html
 管理员后台访问 admin/login.html
 
